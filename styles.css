@@ -71,6 +71,19 @@ p { color: var(--muted); line-height: 1.8; }
 .category-rail { display: flex; gap: 8px; margin: 0 0 44px; overflow-x: auto; padding: 3px 0 12px; scrollbar-width: thin; }
 .category-chip { background: transparent; border: 1px solid var(--line); color: var(--muted); flex: 0 0 auto; font-size: .72rem; padding: 11px 15px; }
 .category-chip.active, .category-chip:hover { background: var(--gold); border-color: var(--gold); color: white; }
+.nath-detail-list { border-top: 1px solid var(--line); }
+.nath-detail-row { align-items: center; border-bottom: 1px solid var(--line); display: grid; gap: 16px; grid-template-columns: 70px 1.5fr 1fr 1fr 1fr 1fr; padding: 12px 0; }
+.nath-detail-row:hover { background: var(--paper); }
+.nath-detail-row img { height: 70px; object-fit: cover; width: 70px; }
+.nath-detail-row span { color: var(--muted); font-size: .8rem; }
+.nath-detail-row strong { color: var(--ink); display: block; font-family: var(--serif); font-size: 1rem; }
+.nath-detail-row small { color: var(--gold); display: block; font-size: .65rem; margin-top: 5px; }
+.nath-loading { align-items: center; display: flex; flex-direction: column; gap: 12px; justify-content: center; min-height: 240px; }
+.nath-loading span { animation: nath-pulse 1s ease-in-out infinite; background: var(--gold); border-radius: 50%; display: inline-block; height: 9px; margin: 0 3px; width: 9px; }
+.nath-loading span:nth-child(2) { animation-delay: .15s; }
+.nath-loading span:nth-child(3) { animation-delay: .3s; }
+.nath-loading em { color: var(--muted); font-size: .75rem; font-style: normal; letter-spacing: .08em; text-transform: uppercase; }
+@keyframes nath-pulse { 0%, 100% { opacity: .35; transform: translateY(0); } 50% { opacity: 1; transform: translateY(-6px); } }
 .category-tree { border-bottom: 1px solid var(--line); border-top: 1px solid var(--line); margin: 22px 0 28px; }
 .tree-parent { border-bottom: 1px solid var(--line); display: grid; gap: 10px; grid-template-columns: 220px 1fr; padding: 16px 0; }
 .tree-parent:last-child { border-bottom: 0; }
@@ -98,4 +111,4 @@ p { color: var(--muted); line-height: 1.8; }
 .admin-panel label { display: block; font-size: .75rem; margin: 14px 0 6px; text-transform: uppercase; letter-spacing: .08em; }
 footer { background: #282521; color: white; padding: 34px 5vw; }
 footer p { color: #bdb4a8; font-size: .8rem; }
-@media (max-width: 800px) { .nav { display: none; } .menu { display: block; } .nav.open { background: var(--cream); display: flex; flex-direction: column; gap: 16px; left: 0; padding: 20px 5vw; position: absolute; right: 0; top: 78px; } .hero { min-height: 620px; } .intro { grid-template-columns: 1fr; } .grid { grid-template-columns: repeat(2, 1fr); } .timeline { display: block; margin-bottom: 50px; } .timeline-item { border-left: 1px solid var(--gold); border-top: 0; min-height: 75px; padding: 0 0 20px 30px; } .timeline-item:before { left: -7px; top: 0; } .values { grid-template-columns: 1fr 1fr; } .value:last-child { grid-column: 1 / -1; } .container { padding-bottom: 60px; padding-top: 60px; } .nath-toolbar { grid-template-columns: 1fr; } .tree-parent { display: block; } .tree-parent span { display: inline-block; margin: 12px 16px 0 0; } .manage-row { display: block; } .manage-actions { justify-content: flex-start; margin-top: 10px; } .manage-child { display: block; padding-left: 0; } }
+@media (max-width: 800px) { .nav { display: none; } .menu { display: block; } .nav.open { background: var(--cream); display: flex; flex-direction: column; gap: 16px; left: 0; padding: 20px 5vw; position: absolute; right: 0; top: 78px; } .hero { min-height: 620px; } .intro { grid-template-columns: 1fr; } .grid { grid-template-columns: repeat(2, 1fr); } .timeline { display: block; margin-bottom: 50px; } .timeline-item { border-left: 1px solid var(--gold); border-top: 0; min-height: 75px; padding: 0 0 20px 30px; } .timeline-item:before { left: -7px; top: 0; } .values { grid-template-columns: 1fr 1fr; } .value:last-child { grid-column: 1 / -1; } .container { padding-bottom: 60px; padding-top: 60px; } .nath-toolbar { grid-template-columns: 1fr; } .tree-parent { display: block; } .tree-parent span { display: inline-block; margin: 12px 16px 0 0; } .manage-row { display: block; } .manage-actions { justify-content: flex-start; margin-top: 10px; } .manage-child { display: block; padding-left: 0; } .nath-detail-row { grid-template-columns: 54px 1fr; } .nath-detail-row img { height: 54px; width: 54px; } .nath-detail-row > span:not(:nth-child(2)) { display: none; } }
