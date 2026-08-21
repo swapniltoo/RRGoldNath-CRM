@@ -17,6 +17,10 @@ The Admin route requires username `RRAdmin` and password `RRAdmin@1234` in this 
 
 The editor and Nath category tree currently use browser `localStorage`; seeded Nath groups, subcategories, product metadata, tags, regions, styles, and materials are represented in the same data flow. The browser login is only a prototype gate; production must replace it with server-side authentication, password hashing, secure sessions, MySQL/MariaDB, server-side search, and server-side persistence.
 
+## Nath database module
+
+The production schema and 21 requested seed categories are in [database/schema.sql](database/schema.sql). It defines `nath_categories`, `nath_items`, `nath_item_images`, and `crm_leads`, including status, item-code uniqueness, category restrictions, image references, and active/hidden states. The browser prototype mirrors the item fields locally; import this migration when the Node/Express + MySQL backend is added.
+
 ## cPanel production work
 
 To meet the full CRM brief, add a Node.js API compatible with cPanel Setup Node.js App, MySQL/MariaDB migrations, secure admin authentication, and a `LocalStorageService` rooted at `IMAGE_STORAGE_PATH=./Images`. The API should store relative paths such as `Images/Products/RRG-001/front.webp`, expose `/Images/...` public URLs, validate MIME/type/size/dimensions, and create the requested `Images/Categories`, `Images/Products`, `Images/Collections`, and `Images/Website/About` directories. Keep uploaded files non-executable with an appropriate `.htaccess` rule.
