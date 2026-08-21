@@ -108,6 +108,7 @@ p { color: var(--muted); line-height: 1.8; }
 .field { border: 1px solid var(--line); background: white; padding: 14px; width: 100%; }
 .admin-panel { background: var(--paper); border: 1px solid var(--line); padding: 30px; }
 .login-page { max-width: 760px; }
+.password-change-admin { margin-top: 28px; max-width: 760px; }
 .admin-panel label { display: block; font-size: .75rem; margin: 14px 0 6px; text-transform: uppercase; letter-spacing: .08em; }
 footer { background: #282521; color: white; padding: 34px 5vw; }
 footer p { color: #bdb4a8; font-size: .8rem; }
